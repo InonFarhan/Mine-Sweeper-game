@@ -1,0 +1,50 @@
+<html>
+<link rel="stylesheet" href="css/style.css">
+
+<head>
+    <title>Mine Sweeper</title>
+</head>
+
+<body onload="initGame()" oncontextmenu="return false;">
+    <h1>Mine Sweeper</h1>
+    <select class="level" onclick="chooseLevel(value)">
+        <option value="1">Level: 1</option>
+        <option value="2">Level: 2</option>
+        <option value="3">Level: 3</option>
+    </select>
+    <table class="board"></table>
+    <div class="life">
+        <div>
+            <span class="heart life-1">♥</span>
+        </div>
+        <div>
+            <span class="heart life-2">♥</span>
+        </div>
+        <div>
+            <span class="heart life-3">♥</span>
+        </div>
+    </div>
+    <div class="hints">
+        <div>
+            <span onclick="hint(id)" id="1" class="hint hint-1">&#128161</span>
+        </div>
+        <div>
+            <span onclick="hint(id)" id="2" class="hint hint-2">&#128161</span>
+        </div>
+        <div>
+            <span onclick="hint(id)" id="3" class="hint hint-3">&#128161</span>
+        </div>
+    </div>
+    <div class="mines">
+        <p><span class="mines-count"></span>&#128163</p>
+    </div>
+    <div class="flags">
+        <p class="flags"><span class="flags-count"></span>&#128681</p>
+    </div>
+    <button class="restart" onclick="restart()">&#128578</button>
+    <p class="bless"></p>
+    <button class="silent" onclick="silent()">&#128266</button>
+</body>
+<script src="js/Mine Sweeper.js"></script>
+
+</html>
